@@ -1,7 +1,7 @@
 # TransMilenio — Sistema de Gestión de Rutas
 
 > **Escuela Colombiana de Ingeniería**  
-> Desarrollo Orientado por Objetos 
+> Desarrollo Orientado por Objetos /
 > Natalia Rodriguez - Daniel Villamizar - Sara Arteaga - Julian Tinjaca
 ---
 
