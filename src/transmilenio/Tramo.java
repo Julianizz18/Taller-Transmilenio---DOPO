@@ -3,30 +3,33 @@ package transmilenio;
 import java.io.Serializable;
 import java.util.Objects;
 
+/**
+ * Segmento entre dos estaciones consecutivas dentro de una troncal.
+ */
 public class Tramo implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    private final Estacion origen;
-    private final Estacion destino;
-    private final double distancia;
+    private final Estacion inicio;
+    private final Estacion fin;
+    private final double distancia; // metros
 
-    public Tramo(Estacion origen, Estacion destino, double distancia) {
-        Objects.requireNonNull(origen);
-        Objects.requireNonNull(destino);
-        if (distancia <= 0) throw new IllegalArgumentException("La distancia debe ser positiva");
-        this.origen = origen;
-        this.destino = destino;
+    public Tramo(Estacion inicio, Estacion fin, double distancia) {
+        Objects.requireNonNull(inicio);
+        Objects.requireNonNull(fin);
+        if (distancia <= 0) throw new IllegalArgumentException("Distancia debe ser positiva");
+        this.inicio = inicio;
+        this.fin = fin;
         this.distancia = distancia;
     }
 
-    public Estacion getOrigen() { return origen; }
-    public Estacion getDestino() { return destino; }
-    public double getDistancia() { return distancia; }
+    public Estacion getInicio() { return inicio; }
+    public Estacion getFin()    { return fin; }
+    public double getDistancia(){ return distancia; }
 
     @Override
     public String toString() {
         return String.format("Tramo{%s -> %s, %.1f m}",
-                origen.getNombre(), destino.getNombre(), distancia);
+                inicio.getNombre(), fin.getNombre(), distancia);
     }
 }
