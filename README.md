@@ -1,8 +1,8 @@
-# 🚌 TransMilenio — Sistema de Gestión de Rutas
+# TransMilenio — Sistema de Gestión de Rutas
 
 > **Escuela Colombiana de Ingeniería**  
-> Desarrollo Orientado por Objetos (DOPO-POOB) · Colecciones y Persistencia · S13–S15: 2026-1
-
+> Desarrollo Orientado por Objetos 
+> Natalia Rodriguez - Daniel Villamizar - Sara Arteaga - Julian Tinjaca
 ---
 
 ## Tabla de contenidos
@@ -54,30 +54,8 @@ src/
 
 ---
 
-## Diagrama de clases
+## Diagrama de clases - Archivo Astah
 
-```
-SistemaTransmilenio
- ├── ArrayList<Troncal>           troncales
- ├── TreeSet<Ruta>                rutas
- ├── HashMap<String, Estacion>    estaciones
- └── EstrategiaRuta               estrategia
-          │
-          └── «interface» EstrategiaRuta
-                   ├── RutaMenorTiempo
-                   └── RutaMenorParadas
-
-Estacion ──────────── «interface» EstadoEstacion
-                               ├── EstadoAlto
-                               ├── EstadoMedio
-                               └── EstadoBajo
-
-Troncal ─────────────< ArrayList<Tramo> >
-Tramo   ─────────────  Estacion inicio + Estacion fin
-Ruta    ─────────────< ArrayList<Estacion> >
-```
-
----
 
 ## Colecciones utilizadas y justificación
 
@@ -291,21 +269,11 @@ Todas las excepciones del sistema extienden `TransmilenioException`, que a su ve
 
 ---
 
-## Cómo ejecutar el proyecto
+### Requisitos para ejecutar el proyecto
 
-### Requisitos
-
-- Java 17 o superior
+- Java 
 - Eclipse IDE 2022 o superior
 - JUnit 5 para las pruebas unitarias
-
-### Configuración en Eclipse
-
-1. `File → New → Java Project` y asignar nombre al proyecto.
-2. Clic derecho en `src` → `New → Package` → escribir `transmilenio` → Finish.
-3. Clic derecho en `src` → `New → Package` → escribir `transmilenio.estrategia` → Finish.
-4. Dentro de cada paquete, crear las clases con `New → Class` y pegar el código fuente correspondiente.
-5. Para ejecutar pruebas: clic derecho sobre el archivo de test → `Run As → JUnit Test`.
 
 ---
 
@@ -385,4 +353,4 @@ Troncal cargada = sistema.cargarTroncal("caracas.ser");
 
 ---
 
-*Proyecto desarrollado para la asignatura DOPO-POOB — Escuela Colombiana de Ingeniería · 2026-1*
+*Proyecto desarrollado para la asignatura DOPO — Escuela Colombiana de Ingeniería · 2026-1*
